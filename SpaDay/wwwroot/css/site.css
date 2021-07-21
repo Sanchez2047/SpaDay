@@ -76,11 +76,17 @@ body {
 .colorblock {
     display: block;
     border: outset;
+    border-width:5px;
     width: 80px;
     height: 50px;
 }
 .colorblock:hover {
-    transform: translateY(2px);
+    transform: translateY(3px);
+}
+
+.colorblock:focus {
+    transform: translateY(3px);
+    border: inset;
 }
 #blue {
     background-color: blue;
