@@ -12,5 +12,10 @@ namespace SpaDay.Controllers
         {
             return View();
         }
+        public IActionResult Add()
+        {
+            return View();
+        }
+
     }
 }
