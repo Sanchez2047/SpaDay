@@ -69,9 +69,38 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
-.userinfo{
-    color:blue;
-    position: center;
-    width:100%;
-    bottom:0;
+.userinfo {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    }
+/*#newuser {
+    display: flex;
+    justify-content: flex-end;
+    object-position: right;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 0;*/
 }
+/*header {
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    right: 0px;*/
+    /*height: 10px;*/
+    /*padding: 10px;*/
+/*}
+.link{
+    padding:16px;
+    width: 5px;
+    background-color: blue;
+    text-align: center;
+}*/
+
+/*.words {
+    padding: 7px;
+}
+.container>a{
+    padding:0;
+}*/
