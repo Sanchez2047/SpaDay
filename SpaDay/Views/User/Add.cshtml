@@ -3,15 +3,16 @@
 *@
 @{
 }
-
 <form method="post">
     <label for="Username">Username:</label><br />
-    <input type="text" name="Username" value="" /><br />
+    <input type="text" name="Username" value="@ViewBag.username" /><br />
     <label for="Email">Email:</label><br />
-    <input type="Email" name="email" value="" /><br />
+    <input type="Email" name="email" value="@ViewBag.email" /><br />
     <label for="Password">Password:</label><br />
-    <input type="password" name="Password" value="" /><br />
+    <input type="password" name="Password" value="" />
+    <label style="color:red">@ViewBag.error</label><br />
     <label for="verify">Verify Password:</label><br />
-    <input type="password" name="verify" value="" /><br />
+    <input type="password" name="verify" value="" />
+    <label style="color:red">@ViewBag.error</label><br />
     <input type="submit" value="Submit" />
 </form>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SpaDay.Data;
 using SpaDay.Models;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace SpaDay.Controllers
 {
     public class UserController : Controller
     {
+        [HttpPost("User/SubmitAddUserForm")]
         public IActionResult Index()
         {
             return View();
@@ -20,13 +22,17 @@ namespace SpaDay.Controllers
         [HttpPost("/User/Add")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
+            ViewBag.username = newUser.Username;
+            ViewBag.email = newUser.Email;
+            ViewBag.error = "Passwords Must Match";
+            ViewBag.date = newUser.DateJoined;
 
-            if(newUser.Password == verify)
+            if (newUser.Password == verify)
             {
-                ViewBag.user = newUser;
-                return Redirect("/User/Index");
+                UserData.Add(newUser);
+                return View("Index");
             }
-            return Redirect("/User/Add");
+            return View("Add");
         }  
 
     }
