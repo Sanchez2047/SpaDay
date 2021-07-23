@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SpaDay.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,17 @@ namespace SpaDay.Controllers
         {
             return View();
         }
+        [HttpPost("/User/Add")]
+        public IActionResult SubmitAddUserForm(User newUser, string verify)
+        {
+
+            if(newUser.Password == verify)
+            {
+                ViewBag.user = newUser;
+                return Redirect("/User/Index");
+            }
+            return Redirect("/User/Add");
+        }  
 
     }
 }
