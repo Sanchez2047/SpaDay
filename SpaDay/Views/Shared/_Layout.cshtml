@@ -9,16 +9,17 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Spa" asp-action="Index">SpaDay</a>
-                <a class="navbar-brand" id="newuser" asp-area="" asp-controller="User" asp-action="Add">New Users</a>
-                @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>*@
-            </div>
-        </nav>
+    <div class="topbar">
+        <div class="button" id="left">
+            <a class="topbarlink" id="SpaDay" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="topbarlink" id="SpaDay" asp-area="" asp-controller="Spa" asp-action="Index">SpaDay</a>
+        </div>
+        <div class="button" id="right">
+            <a class="topbarlink" id="NewUser" asp-area="" asp-controller="User" asp-action="Add">New Users</a>
+        </div>
+
+    </div>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">

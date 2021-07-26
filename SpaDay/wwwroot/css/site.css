@@ -1,11 +1,11 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
+/*a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
+}*/
 
 /* Provide sufficient contrast against white background */
 a {
@@ -74,33 +74,39 @@ body {
     position: absolute;
     width: 100%;
     bottom: 50px;
-    }
-/*#newuser {
-    display: flex;
-    justify-content: flex-end;
-    object-position: right;
-    margin-right: 0;
-    margin-left: auto;
-    padding: 0;*/
 }
-/*header {
-    background-color: black;
-    top: 0px;
-    left: 0px;
-    right: 0px;*/
-    /*height: 10px;*/
-    /*padding: 10px;*/
-/*}
-.link{
-    padding:16px;
-    width: 5px;
-    background-color: blue;
-    text-align: center;
-}*/
-
-/*.words {
+.words {
     padding: 7px;
 }
-.container>a{
+.topbarlink {
+    font-size: 20px;
+    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.topbarlink:hover {
+    background-color: lightblue;
+    text-decoration: none;
+}
+
+.topbar {
+    line-height: 60px;
+    border-bottom: 1px solid;
+    border-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 0px 30px lightgrey;
+}
+#left {
+    display:flex;
+    justify-content:left;
+    margin:0;
     padding:0;
-}*/
+}
+#right {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+}
+
