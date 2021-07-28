@@ -1,18 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using SpaDay.ViewModels;
+
+@model AddUserViewModel;
+
 <form method="post">
-    <label for="Username">Username:</label><br />
-    <input type="text" name="Username" value="@ViewBag.username" /><br />
-    <label for="Email">Email:</label><br />
-    <input type="Email" name="email" value="@ViewBag.email" /><br />
-    <label for="Password">Password:</label><br />
-    <input type="password" name="Password" value="" />
-    <label style="color:red">@ViewBag.error</label><br />
-    <label for="verify">Verify Password:</label><br />
-    <input type="password" name="verify" value="" />
-    <label style="color:red">@ViewBag.error</label><br />
-    <input type="submit" value="Submit" />
+    <div class="form-group">
+        <label asp-for="Username">Username:</label><br />
+        <input asp-for="Username" /><br />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password">Password:</label><br />
+        <input asp-for="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VerifyPassword">Verify Password:</label><br />
+        <input asp-for="VerifyPassword" />
+        <span asp-validation-for="VerifyPassword"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email:</label><br />
+        <input asp-for="Email"/><br />
+        <span asp-validation-for="VerifyPassword"></span>
+    </div>
+
+
+        <input type="submit" value="Submit" />
 </form>

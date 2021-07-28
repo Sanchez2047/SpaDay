@@ -36,14 +36,13 @@ namespace SpaDay.Controllers
                     };
                     ViewBag.date = newUser.DateJoined;
                     UserData.Add(newUser);
-                    return View("Index");
+                    return View("Index", newUser);
                 }
 
             }
-            string error = "Passwords Must Match";
-            return View("Add",error);
-            //return View(addUserViewModel);
-        }  
+
+            return View("Add", addUserViewModel);
+        }
 
     }
 }
