@@ -26,19 +26,14 @@ namespace SpaDay.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (addUserViewModel.Password == addUserViewModel.VerifyPassword)
+                User newUser = new User
                 {
-                    User newUser = new User
-                    {
-                        Username = addUserViewModel.Username,
-                        Password = addUserViewModel.Password,
-                        Email = addUserViewModel.Email
-                    };
-                    ViewBag.date = newUser.DateJoined;
-                    UserData.Add(newUser);
-                    return View("Index", newUser);
-                }
-
+                    Username = addUserViewModel.Username,
+                    Password = addUserViewModel.Password,
+                    Email = addUserViewModel.Email
+                };
+                UserData.Add(newUser);
+                return View("Index", newUser);
             }
 
             return View("Add", addUserViewModel);
