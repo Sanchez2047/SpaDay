@@ -1,9 +1,13 @@
-﻿
-<h1>Welcome to the Spa @ViewBag.username</h1>
+﻿@using SpaDay.ViewModels;
+
+@model AddUserViewModel;
+
+
+<h1>Welcome to the Spa Model.username</h1>
 <p>Please use the link below to choose your experience</p>
 <a asp-area="" asp-controller="Spa" asp-action="Index">Services</a>
 
 <div class="userinfo">
-    <p class="words">User: @ViewBag.username</p>
+    <p class="words">User: @Model.Username</p>
     <p class="words">Customer as of @ViewBag.date</p>
 </div>

@@ -38,11 +38,11 @@ namespace SpaDay.Controllers
                     UserData.Add(newUser);
                     return View("Index");
                 }
-                //ViewBag.error = "Passwords Must Match";
 
-                return View("Add");
             }
-            return View("Passwords Must Match", addUserViewModel);
+            string error = "Passwords Must Match";
+            return View("Add",error);
+            //return View(addUserViewModel);
         }  
 
     }
